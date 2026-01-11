@@ -1,0 +1,42 @@
+
+class Employee {
+    void work() {
+        System.out.println("Employee is working");
+    }
+}
+
+
+interface Developer {
+    void develop();
+}
+
+
+interface Tester {
+    void test();
+}
+
+
+class TeamLead extends Employee implements Developer, Tester {
+
+    @Override
+    public void develop() {
+        System.out.println("TeamLead is developing the application");
+    }
+
+    @Override
+    public void test() {
+        System.out.println("TeamLead is testing the application");
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        TeamLead tl = new TeamLead();
+
+        tl.work();    
+        tl.develop();  
+        tl.test();     
+    }
+}

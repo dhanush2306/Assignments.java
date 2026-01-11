@@ -1,0 +1,43 @@
+
+class User {
+    void login() {
+        System.out.println("User logged in");
+    }
+}
+
+
+class Admin extends User {
+    void manageUsers() {
+        System.out.println("Admin is managing users");
+    }
+}
+class Manager extends User {
+    void manageTeam() {
+        System.out.println("Manager is managing the team");
+    }
+}
+class Customer extends User {
+    void placeOrder() {
+        System.out.println("Customer placed an order");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+
+        Admin admin = new Admin();
+        admin.login();
+        admin.manageUsers();
+
+        System.out.println();
+
+        Manager manager = new Manager();
+        manager.login();
+        manager.manageTeam();
+
+        System.out.println();
+
+        Customer customer = new Customer();
+        customer.login();
+        customer.placeOrder();
+    }
+}
